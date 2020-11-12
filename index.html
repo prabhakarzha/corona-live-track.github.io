@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Indias Covid-19 tracker</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+    integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./animate/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!--  ======================= Top page ============================== -->
+  <div class="container pt-2">
+    <div class="row no-gutters">
+      <div class="col-6 pt-2 brand-name">
+        <h4 class="animated pulse infinite slow"><span>Co</span>vid Tracker</h4>
+      </div>
+      <div class="col-6">
+        <img src="./img/corona-logo.png" alt="logo">
+      </div>
+    </div>
+  </div>
+
+
+  <!--  ======================= Banner ================================ -->
+  <div class="banner-section">
+    <div class="container">
+      <div class="row clearfix align-items-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 content-column">
+          <div class="content-box">
+            <h2 class="text-white text-center">INDIA'S
+              <span class="animation_text_word"></span></h2>
+            <section class="typing-corona">
+              <div class="intro pt-1">
+                <h1 class="typing text-white"></h1>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 image-column" data-aos="fade-up">
+          <figure class="image-box img-fluid animated pulse infinite slow"><img src="img/corona-virus-main-pic.png"
+              alt="" data-aos="fade-up" /></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mt-4">
+
+  <!-- Live Upadtes In Numbers -->
+  <div class="container mt-5">
+    <h4 class="text-center update-title pb-2">Throughout India</h4>
+    <div class="today text-center pt-3">
+
+      <h6><i class="fas fa-caret-right pr-1 animated fadeInLeft infinite slow"></i>Todays +ve Cases = <span
+          id="ind-today-confirmed">0</span></h4>
+        <h6><i class="fas fa-caret-right pr-1 animated fadeInLeft infinite slow"></i>Todays Death Cases = <span
+            id="ind-today-deaths">0</span></h6>
+    </div>
+    <div class="row numbers text-center pt-1" data-aos="fade-up">
+      <div class="col-md-4 col-12 one pt-3">
+        <h4>Confirmed</h4>
+        <p id="ind-confirmed">0</p>
+      </div>
+      <div class="col-md-4 col-12 two pt-3">
+        <h4>Recovered</h4>
+        <p id="ind-recovered">0</p>
+      </div>
+      <div class="col-md-4 col-12 three pt-3">
+        <h4>Death</h4>
+        <p id="ind-deaths">0</p>
+      </div>
+    </div>
+
+    <!-- Karnataka -->
+    <h4 class="text-center update-title pb-2 mt-5">Throughout Karnataka</h4>
+    <div class="today text-center pt-3">
+      <h6><i class="fas fa-caret-right pr-1 animated fadeInLeft infinite slow"></i>Todays +ve Cases = <span
+          id="kar-today-confirmed">0</span></h4>
+        <h6><i class="fas fa-caret-right pr-1 animated fadeInLeft infinite slow"></i>Todays Death Cases = <span
+            id="kar-today-deaths">0</span></h6>
+    </div>
+    <div class="row numbers text-center pt-1" data-aos="fade-up">
+      <div class="col-md-4 col-12 one pt-3">
+        <h4>Confirmed</h4>
+        <p id="kar-confirmed">0</p>
+      </div>
+      <div class="col-md-4 col-12 two pt-3">
+        <h4>Recovered</h4>
+        <p id="kar-recovered">0</p>
+      </div>
+      <div class="col-md-4 col-12 three pt-3">
+        <h4>Death</h4>
+        <p id="kar-deaths">0</p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- -------------------------- Profile -->
+  <div class="Profile mt-5 jumbotron">
+    <div class="profile-title text-center">
+      <p>Developer Profile</p>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="card-container mt-2" data-aos="fade-right">
+        <div class="upper-container">
+          <div class="image-container">
+            <img src="img/yooutube1.jpg" />
+          </div>
+        </div>
+
+        <div class="lower-container pb-1">
+          <div>
+            <p class="text-center name  pt-2" data-aos="zoom-in">Prabhakar Kumar</p>
+            <h4 class="text-center pb-3">Web Developer</h4>
+          </div>
+          <div class="profile-content">
+            <div class="ml-1 pt-3">
+              <p><strong>Email:</strong> kumarprabhakar141@gmail.com</p>
+              <p><strong>GitHub :</strong><a href="https://github.com/prabhakarzha" target="_blank"> Click Here</a></p>
+              <p><strong>Location :</strong>Rohini ,New delhi</p>
+              <p><strong>Phone :</strong><a href="tel:+91 9525-200094"> 9525 - 200094</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <fotter class="fotter-section">
+    <div class="fotter-content text-white mt-5">
+      <div class="text-center pt-4 pb-2">
+        <p>Designed & Developed by
+          <strong>
+            Prabhakar kumar </strong>| <span>CSE</span> department | <strong>UTU </strong>Uttarakhand .
+        </p>
+        <p>© 2020 Copyright : All Rights Reserved.</p>
+      </div>
+    </div>
+  </fotter>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init( {
+      offset: 200,
+      duration: 2000,
+      easing: 'ease'
+    } );
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
