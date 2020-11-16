@@ -1,4 +1,4 @@
-// ////////////////////////////////////////////// Typing Effect  //////////////////////////////////////
+
 const words = ['Covid-19 Tracker...'];
 let count = 0;
 let index = 0;
@@ -44,8 +44,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
 const ind_today_confirmed = document.getElementById("ind-today-confirmed");
 const ind_today_deaths = document.getElementById("ind-today-deaths");
+
 const kar_today_confirmed = document.getElementById("kar-today-confirmed");
 const kar_today_deaths = document.getElementById("kar-today-deaths");
+
+const Del_today_confirmed = document.getElementById("Del-today-confirmed");
+const Del_today_deaths = document.getElementById("Del-today-deaths");
 
 const ind_confirmed = document.getElementById("ind-confirmed");
 const ind_recovered = document.getElementById("ind-recovered");
@@ -55,6 +59,10 @@ const kar_confirmed = document.getElementById("kar-confirmed");
 const kar_recovered = document.getElementById("kar-recovered");
 const kar_deaths = document.getElementById("kar-deaths");
 
+const Del_confirmed = document.getElementById("Del-confirmed");
+const Del_recovered = document.getElementById("Del-recovered");
+const Del_deaths = document.getElementById("Del-deaths");
+
 
 $(document).ready(function() {
     fetch("https://api.covid19india.org/data.json")
@@ -62,16 +70,24 @@ $(document).ready(function() {
   .then((data) => {
     ind_today_confirmed.textContent = data.statewise[0].deltaconfirmed
     ind_today_deaths.textContent = data.statewise[0].deltadeaths
-    kar_today_confirmed.textContent = data.statewise[13].deltaconfirmed
-    kar_today_deaths.textContent = data.statewise[13].deltadeaths
+    kar_today_confirmed.textContent = data.statewise[2].deltaconfirmed
+    kar_today_deaths.textContent = data.statewise[2].deltadeaths
+
+    Del_today_confirmed.textContent = data.statewise[7].deltaconfirmed
+    Del_today_deaths.textContent = data.statewise[7].deltadeaths
     
 
     ind_confirmed.textContent = data.statewise[0].confirmed;
     ind_recovered.textContent = data.statewise[0].recovered;
     ind_deaths.textContent = data.statewise[0].deaths;
 
-    kar_confirmed.textContent = data.statewise[13].confirmed;
-    kar_recovered.textContent = data.statewise[13].recovered;
-    kar_deaths.textContent = data.statewise[13].deaths;
+    kar_confirmed.textContent = data.statewise[2].confirmed;
+    kar_recovered.textContent = data.statewise[2].recovered;
+    kar_deaths.textContent = data.statewise[2].deaths;
+
+    Del_confirmed.textContent = data.statewise[7].confirmed;
+    Del_recovered.textContent = data.statewise[7].recovered;
+    Del_deaths.textContent = data.statewise[7].deaths;
   })
 })
+
