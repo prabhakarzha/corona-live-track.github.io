@@ -1,4 +1,5 @@
 
+
 const words = ['Covid-19 Tracker...'];
 let count = 0;
 let index = 0;
@@ -51,6 +52,9 @@ const kar_today_deaths = document.getElementById("kar-today-deaths");
 const Del_today_confirmed = document.getElementById("Del-today-confirmed");
 const Del_today_deaths = document.getElementById("Del-today-deaths");
 
+const up_today_confirmed = document.getElementById("up-today-confirmed");
+const up_today_deaths = document.getElementById("up-today-deaths");
+
 const ind_confirmed = document.getElementById("ind-confirmed");
 const ind_recovered = document.getElementById("ind-recovered");
 const ind_deaths = document.getElementById("ind-deaths");
@@ -64,17 +68,25 @@ const Del_recovered = document.getElementById("Del-recovered");
 const Del_deaths = document.getElementById("Del-deaths");
 
 
+const up_confirmed = document.getElementById("up-confirmed");
+const up_recovered = document.getElementById("up-recovered");
+const up_deaths = document.getElementById("up-deaths");
+
 $(document).ready(function() {
     fetch("https://api.covid19india.org/data.json")
   .then(res => res.json())
   .then((data) => {
     ind_today_confirmed.textContent = data.statewise[0].deltaconfirmed
     ind_today_deaths.textContent = data.statewise[0].deltadeaths
+
     kar_today_confirmed.textContent = data.statewise[2].deltaconfirmed
     kar_today_deaths.textContent = data.statewise[2].deltadeaths
 
     Del_today_confirmed.textContent = data.statewise[7].deltaconfirmed
     Del_today_deaths.textContent = data.statewise[7].deltadeaths
+
+    up_today_confirmed.textContent = data.statewise[5].deltaconfirmed
+    up_today_deaths.textContent = data.statewise[5].deltadeaths
     
 
     ind_confirmed.textContent = data.statewise[0].confirmed;
@@ -88,6 +100,10 @@ $(document).ready(function() {
     Del_confirmed.textContent = data.statewise[7].confirmed;
     Del_recovered.textContent = data.statewise[7].recovered;
     Del_deaths.textContent = data.statewise[7].deaths;
+
+    up_confirmed.textContent = data.statewise[5].confirmed;
+    up_recovered.textContent = data.statewise[5].recovered;
+    up_deaths.textContent = data.statewise[5].deaths;
   })
 })
 
