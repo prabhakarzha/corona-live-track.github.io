@@ -58,10 +58,11 @@ const Del_deaths = document.getElementById("Del-deaths");
 
 
 
+window.onload =()=>{
+    coronalivecase()
+}
 
-
-
-$(document).ready(function() {
+const coronalivecase =()=>{
     fetch("https://api.covid19india.org/data.json")
   .then(res => res.json())
   .then((data) => {
@@ -97,5 +98,5 @@ $(document).ready(function() {
     
 
   })
-})
+}
 
