@@ -30,12 +30,19 @@ document.addEventListener('DOMContentLoaded', function(){
 
 const ind_today_confirmed = document.getElementById("ind-today-confirmed");
 const ind_today_deaths = document.getElementById("ind-today-deaths");
+const lastupdatedtime = document.getElementById("lastupdatedtime");
 
 const kar_today_confirmed = document.getElementById("kar-today-confirmed");
 const kar_today_deaths = document.getElementById("kar-today-deaths");
 
+
+
 const Del_today_confirmed = document.getElementById("Del-today-confirmed");
 const Del_today_deaths = document.getElementById("Del-today-deaths");
+
+
+
+
 
 
 
@@ -68,12 +75,18 @@ const coronalivecase =()=>{
   .then((data) => {
     ind_today_confirmed.textContent = data.statewise[0].deltaconfirmed
     ind_today_deaths.textContent = data.statewise[0].deltadeaths
+    lastupdatedtime.textContent =data.statewise[0].lastupdatedtime
 
     kar_today_confirmed.textContent = data.statewise[2].deltaconfirmed
     kar_today_deaths.textContent = data.statewise[2].deltadeaths
+   
+   
+    
 
     Del_today_confirmed.textContent = data.statewise[7].deltaconfirmed
     Del_today_deaths.textContent = data.statewise[7].deltadeaths
+   
+    
 
     
 
